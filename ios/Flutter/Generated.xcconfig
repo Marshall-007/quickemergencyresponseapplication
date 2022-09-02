@@ -1,8 +1,8 @@
 // This is a generated file; do not edit or check into version control.
-FLUTTER_ROOT=C:\Users\user\Downloads\flutter_windows_3.3.0-stable\flutter
-FLUTTER_APPLICATION_PATH=W:\MTN Hackathon\quickemergencyresponse
+FLUTTER_ROOT=/Users/mac/applications/flutter
+FLUTTER_APPLICATION_PATH=/Users/mac/Desktop/mtn-hackathon/quickemergencyresponseapplication
 COCOAPODS_PARALLEL_CODE_SIGN=true
-FLUTTER_TARGET=lib\main.dart
+FLUTTER_TARGET=lib/main.dart
 FLUTTER_BUILD_DIR=build
 FLUTTER_BUILD_NAME=1.0.0
 FLUTTER_BUILD_NUMBER=1

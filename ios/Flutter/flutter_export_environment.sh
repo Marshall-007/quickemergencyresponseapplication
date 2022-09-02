@@ -1,9 +1,9 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=C:\Users\user\Downloads\flutter_windows_3.3.0-stable\flutter"
-export "FLUTTER_APPLICATION_PATH=W:\MTN Hackathon\quickemergencyresponse"
+export "FLUTTER_ROOT=/Users/mac/applications/flutter"
+export "FLUTTER_APPLICATION_PATH=/Users/mac/Desktop/mtn-hackathon/quickemergencyresponseapplication"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
-export "FLUTTER_TARGET=lib\main.dart"
+export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
 export "FLUTTER_BUILD_NUMBER=1"
