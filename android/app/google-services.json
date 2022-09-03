@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "928603372186",
+    "project_id": "quickemergencyresponse-c9c27",
+    "storage_bucket": "quickemergencyresponse-c9c27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928603372186:android:397c2b61d488394b763d23",
+        "android_client_info": {
+          "package_name": "com.example.quickemergencyresponse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928603372186-jlvra59bc8b4vhr8dpf8m9bck7aivkhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUf07be2auilnlfmS_5fZZOxqA1H5Rreg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928603372186-jlvra59bc8b4vhr8dpf8m9bck7aivkhd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
