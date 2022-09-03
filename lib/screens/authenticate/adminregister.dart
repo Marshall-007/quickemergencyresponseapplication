@@ -8,7 +8,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 //List For DropDown List
-const List<String> list = <String>['Ambulance', 'Tow Truck'];
+const List<String> list = <String>['Mechanic', 'Tow Truck'];
 // Initializing firebase database
 void main() async {
   //Initializing Database when starting the application.
@@ -54,45 +54,37 @@ class _AdminRegister extends State<AdminRegister> {
         },
         decoration: InputDecoration(
             contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-            hintText: "Name*",
+            hintText: "Full Name*",
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
 
-    // Surname field
+    // Entity name field
 
     final surnameField = TextFormField(
         controller: _surname,
         autofocus: false,
-        validator: (value) {
-          if (value != null) {
-            if (value.contains('@') && value.endsWith('.com')) {
-              return null;
-            }
-            return 'Enter a Valid Surname.';
-          }
-        },
         decoration: InputDecoration(
             contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-            hintText: "Surname*",
+            hintText: "Entity Name*",
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
 
-    final contactField = TextFormField(
-        controller: _contact,
+//Entity Registratin number
+    final registrationField = TextFormField(
+        controller: _surname,
         autofocus: false,
-        validator: (value) {
-          if (value == null || value.trim().isEmpty) {
-            return 'Please valid Contact number';
-          }
-          if (value.trim().length < 8) {
-            return 'Number must be 10 characters in length';
-          }
-          // Return null if the entered password is valid
-          return null;
-        },
         decoration: InputDecoration(
             contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-            hintText: "Contact Number*",
+            hintText: "Entity Registration Number*",
+            border:
+                OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
+//Address Feild
+    final addressField = TextFormField(
+        controller: _surname,
+        autofocus: false,
+        decoration: InputDecoration(
+            contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            hintText: "Physical Address*",
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
 
@@ -207,7 +199,7 @@ class _AdminRegister extends State<AdminRegister> {
                   const SizedBox(height: 35.0),
                   emailField,
                   const SizedBox(height: 53.0),
-                  contactField,
+                  DropdownButtonExample(),
                   const SizedBox(height: 25.0),
                   passwordField,
                   const SizedBox(height: 25.0),
@@ -221,6 +213,43 @@ class _AdminRegister extends State<AdminRegister> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class DropdownButtonExample extends StatefulWidget {
+  const DropdownButtonExample({super.key});
+
+  @override
+  State<DropdownButtonExample> createState() => _DropdownButtonExampleState();
+}
+
+class _DropdownButtonExampleState extends State<DropdownButtonExample> {
+  String dropdownValue = list.first;
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButton<String>(
+      value: dropdownValue,
+      icon: const Icon(Icons.arrow_downward),
+      elevation: 16,
+      style: const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+      underline: Container(
+        height: 2,
+        color: Color.fromARGB(255, 0, 0, 0),
+      ),
+      onChanged: (String? value) {
+        // This is called when the user selects an item.
+        setState(() {
+          dropdownValue = value!;
+        });
+      },
+      items: list.map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
     );
   }
 }

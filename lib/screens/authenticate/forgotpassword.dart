@@ -1,6 +1,5 @@
 import 'package:quickemergencyresponse/models/loginuser.dart';
 import 'package:quickemergencyresponse/screens/authenticate/Selector.dart';
-import 'package:quickemergencyresponse/screens/authenticate/forgotpassword.dart';
 import 'package:quickemergencyresponse/screens/home/home.dart';
 import 'package:quickemergencyresponse/services/auth.dart';
 import 'package:flutter/material.dart';
@@ -13,20 +12,18 @@ void main() async {
   //Initializing Database when starting the application.
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(Login());
+  
 }
 
-class Login extends StatefulWidget {
-  final Function? toggleView;
-  Login({this.toggleView});
+class Forgotpassword extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    return _Login();
+    return _Forgotpassword();
   }
 }
 
-class _Login extends State<Login> {
+class _Forgotpassword extends State<Forgotpassword> {
   bool _obscureText = true;
 
   final _email = TextEditingController();
@@ -54,51 +51,9 @@ class _Login extends State<Login> {
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
 
-    final passwordField = TextFormField(
-        obscureText: _obscureText,
-        controller: _password,
-        autofocus: false,
-        validator: (value) {
-          if (value == null || value.trim().isEmpty) {
-            return 'This field is required';
-          }
-          if (value.trim().length < 8) {
-            return 'Password must be at least 8 characters in length';
-          }
-          // Return null if the entered password is valid
-          return null;
-        },
-        decoration: InputDecoration(
-            contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-            hintText: "Password",
-            suffixIcon: IconButton(
-              icon:
-                  Icon(_obscureText ? Icons.visibility : Icons.visibility_off),
-              onPressed: () {
-                setState(() {
-                  _obscureText = !_obscureText;
-                });
-              },
-            ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(32.0),
-            )));
+    
 
-    final txtbutton = TextButton(
-        onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Selector()));
-        },
-        child: const Text('Create new user / service provider'));
-
-  // Text for  forgot password
- final forgotbutton = TextButton(
-        onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Forgotpassword()));
-        },
-        child: const Text('Forgot password.'));
-
+    
     
     final loginEmailPasswordButon = Material(
       elevation: 5.0,
@@ -124,17 +79,18 @@ class _Login extends State<Login> {
           }
         },
         child: Text(
-          "Log in",
+          "Submit",
           style: TextStyle(color: Theme.of(context).primaryColorLight),
           textAlign: TextAlign.center,
         ),
       ),
     );
 
+    var ForgotPasswordButton = loginEmailPasswordButon;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text('Login'),
+        title: const Text('Forgot Password'),
         backgroundColor: Theme.of(context).primaryColor,
       ),
       body: Column(
@@ -159,13 +115,10 @@ class _Login extends State<Login> {
 ),
                   const SizedBox(height: 45.0),
                   emailField,
-                  const SizedBox(height: 25.0),
-                  passwordField,
-                  
+                 
                   const SizedBox(height: 35.0),
-                  loginEmailPasswordButon,
-                  txtbutton,
-                  forgotbutton,
+                  ForgotPasswordButton,
+               
                   const SizedBox(height: 15.0),
                 ],
               ),

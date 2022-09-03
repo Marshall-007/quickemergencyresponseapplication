@@ -103,6 +103,8 @@ class _Register extends State<Register> {
             hintText: "Email*",
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
+
+  
 //Password field and limit to 8 char
     final passwordField = TextFormField(
         obscureText: _obscureText,
@@ -197,6 +199,10 @@ class _Register extends State<Register> {
                   emailField,
                   const SizedBox(height: 53.0),
                   contactField,
+                  
+                   const SizedBox(height: 29),
+                  
+
                   const SizedBox(height: 25.0),
                   passwordField,
                   const SizedBox(height: 25.0),
