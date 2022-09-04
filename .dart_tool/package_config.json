@@ -50,8 +50,20 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_lints",
+      "rootUri": "file:///Users/mac/applications/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/mac/applications/flutter/packages/flutter_test",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "lints",
+      "rootUri": "file:///Users/mac/applications/flutter/.pub-cache/hosted/pub.dartlang.org/lints-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -128,13 +140,13 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "QER",
+      "name": "qer",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-09-02T21:59:42.851236Z",
+  "generated": "2022-09-04T08:15:54.297228Z",
   "generator": "pub",
   "generatorVersion": "2.18.0"
 }
