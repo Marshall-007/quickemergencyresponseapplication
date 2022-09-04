@@ -91,15 +91,14 @@ class _Login extends State<Login> {
         },
         child: const Text('Create new user / service provider'));
 
-  // Text for  forgot password
- final forgotbutton = TextButton(
+    // Text for  forgot password
+    final forgotbutton = TextButton(
         onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Forgotpassword()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => Forgotpassword()));
         },
         child: const Text('Forgot password.'));
 
-    
     final loginEmailPasswordButon = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
@@ -148,19 +147,19 @@ class _Login extends State<Login> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                 SizedBox(
-                height: 125,
-                width: 125,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(90)),
-                    child: Image.asset('assets/images/QER-RoundLogo.jpg',fit:BoxFit.cover),
-   ),
-),
+                  SizedBox(
+                    height: 125,
+                    width: 125,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(90)),
+                      child: Image.asset('assets/images/QER-RoundLogo.jpg',
+                          fit: BoxFit.cover),
+                    ),
+                  ),
                   const SizedBox(height: 45.0),
                   emailField,
                   const SizedBox(height: 25.0),
                   passwordField,
-                  
                   const SizedBox(height: 35.0),
                   loginEmailPasswordButon,
                   txtbutton,
@@ -173,7 +172,5 @@ class _Login extends State<Login> {
         ],
       ),
     );
-  
   }
-  
 }
