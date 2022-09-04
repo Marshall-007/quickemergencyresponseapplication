@@ -64,18 +64,17 @@ class _Forgotpassword extends State<Forgotpassword> {
         padding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () async {
           if (_formKey.currentState!.validate()) {
-            dynamic result = await _auth.signInEmailPassword(
-                LoginUser(email: _email.text, password: _password.text));
-            if (result.uid == null) {
+            
+            
               //null means unsuccessfull authentication
               showDialog(
                   context: context,
                   builder: (context) {
-                    return AlertDialog(
-                      content: Text(result.code),
+                    return const AlertDialog(
+                      content: Text("Request Submited. Will Contact you soon"),
                     );
                   });
-            }
+            
           }
         },
         child: Text(
@@ -109,8 +108,7 @@ class _Forgotpassword extends State<Forgotpassword> {
                 width: 125,
                 child: ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(90)),
-                    child: Image.network(
-                        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=988&q=80",fit:BoxFit.cover),
+                    child: Image.asset('assets/images/QER-RoundLogo.jpg',fit:BoxFit.cover),
    ),
 ),
                   const SizedBox(height: 45.0),

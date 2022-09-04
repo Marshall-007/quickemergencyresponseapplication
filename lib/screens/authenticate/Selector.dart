@@ -26,9 +26,9 @@ class _Selector extends State<Selector> {
   Widget build(BuildContext context) {
     final txtbutton = TextButton(
         onPressed: () {
-          widget.toggleView!();
+         
         },
-        child: const Text('I am a'));
+        child: const Text('Please select what you are \n registering as.'));
 
     final userButton = Material(
       elevation: 5.0,

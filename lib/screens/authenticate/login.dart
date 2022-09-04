@@ -153,8 +153,7 @@ class _Login extends State<Login> {
                 width: 125,
                 child: ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(90)),
-                    child: Image.network(
-                        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=988&q=80",fit:BoxFit.cover),
+                    child: Image.asset('assets/images/QER-RoundLogo.jpg',fit:BoxFit.cover),
    ),
 ),
                   const SizedBox(height: 45.0),
