@@ -25,9 +25,8 @@ class _Selector extends State<Selector> {
   @override
   Widget build(BuildContext context) {
     final txtbutton = TextButton(
-        onPressed: () {
-         
-        },
+
+        onPressed: () {},
         child: const Text('Please select what you are \n registering as.'));
 
     final userButton = Material(
