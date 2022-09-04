@@ -9,6 +9,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 //List For DropDown List
 const List<String> list = <String>['Mechanic', 'Tow Truck'];
+
+
 // Initializing firebase database
 void main() async {
   //Initializing Database when starting the application.
@@ -30,10 +32,20 @@ class _AdminRegister extends State<AdminRegister> {
   final AuthService _auth = new AuthService();
 
   bool _obscureText = true;
-  final _email = TextEditingController();
+  final _registration = TextEditingController();
   final _name = TextEditingController();
-  final _contact = TextEditingController();
-  final _surname = TextEditingController();
+  final _address = TextEditingController();
+  final _oparatingHours = TextEditingController();
+  final _make = TextEditingController();
+  final _reg = TextEditingController();
+  final _vin = TextEditingController();
+  final _model= TextEditingController();
+  final _entityName = TextEditingController();
+  final _Color = TextEditingController();
+  final _Account = TextEditingController();
+  final _email = TextEditingController();
+
+
   final _password = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   @override
@@ -60,8 +72,8 @@ class _AdminRegister extends State<AdminRegister> {
 
     // Entity name field
 
-    final surnameField = TextFormField(
-        controller: _surname,
+    final entitynameField = TextFormField(
+        controller: _entityName,
         autofocus: false,
         decoration: InputDecoration(
             contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -71,7 +83,7 @@ class _AdminRegister extends State<AdminRegister> {
 
 //Entity Registratin number
     final registrationField = TextFormField(
-        controller: _surname,
+        controller: _registration,
         autofocus: false,
         decoration: InputDecoration(
             contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -80,13 +92,24 @@ class _AdminRegister extends State<AdminRegister> {
                 OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
 //Address Feild
     final addressField = TextFormField(
-        controller: _surname,
+        controller: _address,
         autofocus: false,
         decoration: InputDecoration(
             contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
             hintText: "Physical Address*",
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
+
+//oparating  Feild
+    final oparatingField = TextFormField(
+        controller: _oparatingHours,
+        autofocus: false,
+        decoration: InputDecoration(
+            contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            hintText: "Oparateing Hours*",
+            border:
+                OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))));
+
 
     //Email Field
     final emailField = TextFormField(
@@ -192,19 +215,21 @@ class _AdminRegister extends State<AdminRegister> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  const SizedBox(height: 53.0),
+                  const SizedBox(height: 25.0),
                   nameField,
-                  const SizedBox(height: 43.0),
-                  surnameField,
-                  const SizedBox(height: 35.0),
-                  emailField,
-                  const SizedBox(height: 53.0),
+                  const SizedBox(height: 25.0),
+                  entitynameField,
+                  const SizedBox(height: 25.0),
+                  registrationField,
+                  const SizedBox(height: 25.0),
+                  addressField,
+                  const SizedBox(height: 25.0),
                   DropdownButtonExample(),
                   const SizedBox(height: 25.0),
                   passwordField,
                   const SizedBox(height: 25.0),
                   txtbutton,
-                  const SizedBox(height: 35.0),
+                  const SizedBox(height: 25.0),
                   registerButton,
                   const SizedBox(height: 15.0),
                 ],
